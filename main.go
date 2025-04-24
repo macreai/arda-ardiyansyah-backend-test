@@ -6,7 +6,8 @@ import (
 )
 
 func main() {
-	fmt.Println(findSelfNumbers(1, 5000))
+	fmt.Println(findSelfNumbers(1, 100))
+	fmt.Println(sum([]int{1, 3, 5, 7, 9, 20, 31, 42, 53, 64, 75, 86, 97}))
 }
 
 func d(n int) int {
@@ -42,6 +43,16 @@ func findSelfNumbers(fromNumber, toNumber int) int {
 
 	return selfNumbersSum
 
+}
+
+func sum(numbers []int) int {
+	sum := 0
+
+	for _, v := range numbers {
+		sum += v
+	}
+
+	return sum
 }
 
 // Sebagian bilangan dapat memiliki lebih dari satu generator. Contohnya:
